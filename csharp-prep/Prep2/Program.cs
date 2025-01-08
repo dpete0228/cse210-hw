@@ -21,7 +21,11 @@ class Program
         }else if (percentGrade < 60){
             letterGrade = "F";
         }
-        Console.WriteLine($"You got a(n) {letterGrade} in the class");
-
+        Console.WriteLine($"Your grade is {letterGrade}");
+        if (percentGrade >= 70){
+            Console.WriteLine("You passed!");
+        }else{
+            Console.WriteLine("Better luck next time");
+        }
     }
 }
