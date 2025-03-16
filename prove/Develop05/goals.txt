@@ -1,0 +1,4 @@
+500
+eternal~|~Study my Scriptures~|~Read them at least 15 minutes~|~50~|~False
+simple~|~Run a marathon~|~Run a marathon in 2 hours~|~100~|~True
+checklist~|~Attend the temple~|~Perform any ordinance in the temple~|~50~|~True~|~3~|~3~|~200
