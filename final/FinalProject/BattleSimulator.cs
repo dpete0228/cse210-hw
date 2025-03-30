@@ -69,7 +69,7 @@ public void CreateArmies()
         }
     }
     Console.WriteLine("Great! Now we'll create the lamanite army");
-    for (int i = 0; i < 5; i++){    
+    for (int i = 0; i < 4; i++){    
         Console.Write($"How many {GetLamaniteWarriorType(i).GetUnitType()}s are going to be in this? ");
         string userInput = Console.ReadLine();
         int unitCount = int.Parse(userInput);
@@ -107,11 +107,9 @@ public void CreateArmies()
                 Lamanite lamaniteCommander = new Lamanite();
                 return lamaniteCommander;
             case 2:
-                Lamanite amulekite = new Lamanite();
-                return amulekite;
-            case 3:
-                Lamanite zoramite = new Lamanite();
-                return zoramite;
+                Lamanite dissenter = new Lamanite();
+                return dissenter;
+
             default:
                 Lamanite lamanite = new Lamanite();
                 return lamanite;
