@@ -20,7 +20,7 @@ class Warrior
         _morale = morale;
    }
 
-   public void Defend(int damage){
+   public virtual void Defend(int damage){
         if (damage > _defense){
             _health = _health - damage + _defense;
             _morale = _morale - damage + _defense;
@@ -33,20 +33,24 @@ class Warrior
 
    public virtual void DeadCheck(){
         Random random = new Random();
-        int randomInt = random.Next(50-_health);
-            if(_health <= 0 && randomInt != 1){
+        if(_health < 0){
+            int randomInt = random.Next(50-_health);
+            if(_health < 0 && randomInt != 1){
                 _isDead = true;
-            }else if(_health <= 0 && randomInt == 1){
-                randomInt = random.Next(_health) + 1;
+            }else if(_health < 0 && randomInt == 1){
+                randomInt = random.Next(_health*-1) + 1;
+                _health = 50;
                 _deadRounds = randomInt;
             }
+        }
    }
-   public virtual void Attack(Warrior warrior){
+   public virtual int Attack(Warrior warrior){
         int damageLow = _attackPower - 5;
         int damageHigh = _attackPower + 5;
         Random random = new Random();
         int damage = random.Next(damageLow, damageHigh);
         warrior.Defend(damage);
+        return 0;
    }
    public virtual void RetreatCheck(){
         if(_morale <= 0){
@@ -118,9 +122,9 @@ class Warrior
         return _deadRounds;
     }
 
-    public void SetDeadRounds(int value)
+    public void SetDeadRounds(int rounds)
     {
-        _deadRounds = value;
+        _deadRounds=rounds;
     }
 
     public string GetUnitType(){

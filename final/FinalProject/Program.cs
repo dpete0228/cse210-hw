@@ -6,5 +6,6 @@ class Program
     {
         BattleSimulator battleSimulator = new BattleSimulator();
         battleSimulator.CreateArmies();
+        battleSimulator.SimulateBattle();
     }
 }
