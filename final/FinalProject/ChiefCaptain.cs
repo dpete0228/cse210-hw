@@ -3,8 +3,8 @@ using System;
 class ChiefCaptain : Warrior
 {
 
-
-   public ChiefCaptain():base("Chief Captain", 150, 30, 20, 100){
+    // Initialize Chief Captain with base stats
+   public ChiefCaptain():base("Chief Captain", 100, 30, 20, 100, true){
 
    }
 

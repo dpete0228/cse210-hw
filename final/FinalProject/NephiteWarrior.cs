@@ -3,14 +3,12 @@ using System;
 class NephiteWarrior : Warrior
 {
 
+   // Initialize Nephite Warrior with base stats
 
-   public NephiteWarrior():base("Nephite Warrior", 100, 20, 10, 50){
+   public NephiteWarrior():base("Nephite Warrior", 100, 20, 10, 50, false){
 
    }
    
-   public NephiteWarrior(string type, int health, int attackPower, int defense, int morale):base(type, health, attackPower, defense, morale){
-    
-   }
 
 
 

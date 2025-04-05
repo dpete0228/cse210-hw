@@ -3,8 +3,8 @@ using System;
 class LamaniteCommander : Warrior
 {
 
-
-   public LamaniteCommander():base("Lamanite Commander", 100, 15, 7, 40){
+   // Initialize Lamanite Commander with Base Stats
+   public LamaniteCommander():base("Lamanite Commander", 100, 30, 10, 50, true){
 
    }
 }
